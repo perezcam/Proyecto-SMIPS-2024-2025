@@ -60,6 +60,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <circ-port height="8" pin="170,400" width="8" x="306" y="106"/>
       <circ-port height="8" pin="170,430" width="8" x="256" y="156"/>
       <circ-port height="10" pin="560,340" width="10" x="295" y="175"/>
+      <circ-port height="8" pin="170,460" width="8" x="256" y="166"/>
       <circ-anchor facing="east" height="6" width="6" x="317" y="177"/>
     </appear>
     <wire from="(400,330)" to="(400,400)"/>
@@ -93,30 +94,16 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(400,330)" to="(470,330)"/>
     <wire from="(550,340)" to="(560,340)"/>
     <comp lib="0" loc="(300,300)" name="Constant"/>
-    <comp lib="0" loc="(170,430)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="rst-Reset"/>
-    </comp>
-    <comp lib="4" loc="(330,290)" name="Register">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="3" loc="(340,400)" name="Adder">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(170,340)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="label" val="jmp-addr"/>
-    </comp>
     <comp lib="0" loc="(300,410)" name="Constant">
       <a name="width" val="32"/>
       <a name="value" val="0x4"/>
     </comp>
-    <comp lib="0" loc="(170,460)" name="Clock">
-      <a name="label" val="clk"/>
+    <comp lib="2" loc="(500,340)" name="Multiplexer">
+      <a name="width" val="32"/>
+      <a name="enable" val="false"/>
     </comp>
-    <comp lib="0" loc="(170,400)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="jmp-Jump"/>
+    <comp lib="3" loc="(340,400)" name="Adder">
+      <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(560,340)" name="Pin">
       <a name="facing" val="west"/>
@@ -124,9 +111,24 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="32"/>
       <a name="label" val="Q"/>
     </comp>
-    <comp lib="2" loc="(500,340)" name="Multiplexer">
+    <comp lib="0" loc="(170,430)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="rst-Reset"/>
+    </comp>
+    <comp lib="0" loc="(170,400)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="jmp-Jump"/>
+    </comp>
+    <comp lib="0" loc="(170,460)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="fetch"/>
+    </comp>
+    <comp lib="4" loc="(330,290)" name="Register">
       <a name="width" val="32"/>
-      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(170,340)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="label" val="jmp-addr"/>
     </comp>
   </circuit>
 </project>
