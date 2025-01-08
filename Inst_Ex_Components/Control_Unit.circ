@@ -131,28 +131,27 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(650,170)" to="(790,170)"/>
     <wire from="(890,160)" to="(970,160)"/>
     <wire from="(1200,360)" to="(1220,360)"/>
-    <comp lib="0" loc="(1200,360)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="rst"/>
-    </comp>
-    <comp lib="0" loc="(80,550)" name="Pin">
+    <comp lib="0" loc="(80,500)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="RESET"/>
+      <a name="label" val="HALT?"/>
       <a name="labelloc" val="north"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp lib="0" loc="(850,180)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="clk"/>
-    </comp>
-    <comp lib="4" loc="(890,160)" name="D Flip-Flop">
-      <a name="label" val="EXEC"/>
-    </comp>
-    <comp lib="4" loc="(450,170)" name="D Flip-Flop">
-      <a name="label" val="FETCH"/>
+    <comp lib="0" loc="(320,190)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="fetch"/>
     </comp>
     <comp lib="0" loc="(40,130)" name="Clock">
       <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(90,550)" name="Tunnel">
+      <a name="label" val="rst"/>
+    </comp>
+    <comp lib="2" loc="(230,170)" name="Demultiplexer">
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="4" loc="(890,160)" name="D Flip-Flop">
+      <a name="label" val="EXEC"/>
     </comp>
     <comp lib="0" loc="(1220,330)" name="Pin">
       <a name="facing" val="west"/>
@@ -160,17 +159,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="fetch"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(410,190)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="clk"/>
-    </comp>
-    <comp lib="1" loc="(820,160)" name="OR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(80,500)" name="Pin">
+    <comp lib="0" loc="(80,440)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="HALT?"/>
+      <a name="label" val="EXECUTED"/>
       <a name="labelloc" val="north"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
@@ -180,28 +171,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="north"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp lib="2" loc="(970,160)" name="Demultiplexer">
+    <comp lib="2" loc="(620,180)" name="Demultiplexer">
       <a name="enable" val="false"/>
     </comp>
-    <comp lib="1" loc="(390,170)" name="OR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="1" loc="(1110,270)" name="OR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="4" loc="(1170,270)" name="D Flip-Flop">
-      <a name="label" val="END"/>
-    </comp>
-    <comp lib="0" loc="(1200,330)" name="Tunnel">
+    <comp lib="0" loc="(410,190)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="fetch"/>
-    </comp>
-    <comp lib="0" loc="(30,200)" name="Constant"/>
-    <comp lib="0" loc="(320,190)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="fetch"/>
+      <a name="label" val="clk"/>
     </comp>
     <comp lib="0" loc="(1220,360)" name="Pin">
       <a name="facing" val="west"/>
@@ -209,18 +184,16 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="reset"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(90,550)" name="Tunnel">
-      <a name="label" val="rst"/>
+    <comp lib="0" loc="(1130,290)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
     </comp>
-    <comp lib="2" loc="(230,170)" name="Demultiplexer">
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="1" loc="(150,160)" name="OR Gate">
+    <comp lib="1" loc="(820,160)" name="OR Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="4" loc="(200,170)" name="D Flip-Flop">
-      <a name="label" val="IDLE"/>
+    <comp lib="2" loc="(970,160)" name="Demultiplexer">
+      <a name="enable" val="false"/>
     </comp>
     <comp lib="0" loc="(160,190)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -232,25 +205,58 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="north"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp lib="0" loc="(1130,290)" name="Tunnel">
+    <comp lib="1" loc="(390,170)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="0" loc="(850,180)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="clk"/>
-    </comp>
-    <comp lib="2" loc="(490,170)" name="Demultiplexer">
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="2" loc="(620,180)" name="Demultiplexer">
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="0" loc="(80,440)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="EXECUTED"/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
     <comp lib="0" loc="(40,130)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="clk"/>
     </comp>
+    <comp lib="1" loc="(1110,270)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(80,550)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="RESET"/>
+      <a name="labelloc" val="north"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(1200,360)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="rst"/>
+    </comp>
+    <comp lib="0" loc="(1200,330)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="fetch"/>
+    </comp>
+    <comp lib="2" loc="(490,170)" name="Demultiplexer">
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="4" loc="(200,170)" name="D Flip-Flop">
+      <a name="label" val="IDLE"/>
+    </comp>
+    <comp lib="1" loc="(150,160)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="4" loc="(450,170)" name="D Flip-Flop">
+      <a name="label" val="FETCH"/>
+    </comp>
+    <comp lib="0" loc="(30,200)" name="Constant"/>
+    <comp lib="4" loc="(1170,270)" name="D Flip-Flop">
+      <a name="label" val="END"/>
+    </comp>
+  </circuit>
+  <circuit name="a">
+    <a name="circuit" val="a"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
   </circuit>
 </project>
