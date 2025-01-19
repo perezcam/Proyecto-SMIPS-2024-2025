@@ -29,8 +29,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   </options>
   <mappings>
     <tool lib="6" map="Button2" name="Menu Tool"/>
-    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
     <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
   </mappings>
   <toolbar>
     <tool lib="6" name="Poke Tool"/>
@@ -69,74 +69,42 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <ellipse cx="355.5" cy="216.5" fill="none" rx="2.5" ry="2.5" stroke="#000000"/>
       <ellipse cx="355.5" cy="226.5" fill="none" rx="2.5" ry="2.5" stroke="#000000"/>
       <polyline fill="none" points="356,219 356,224" stroke="#000000"/>
-      <circ-port height="8" pin="150,220" width="8" x="326" y="186"/>
-      <circ-port height="8" pin="150,320" width="8" x="326" y="216"/>
-      <circ-port height="8" pin="560,390" width="8" x="356" y="236"/>
-      <circ-port height="8" pin="560,410" width="8" x="336" y="236"/>
-      <circ-port height="10" pin="740,270" width="10" x="365" y="195"/>
+      <circ-port height="8" pin="420,220" width="8" x="326" y="186"/>
+      <circ-port height="8" pin="420,320" width="8" x="326" y="216"/>
+      <circ-port height="8" pin="830,390" width="8" x="356" y="236"/>
+      <circ-port height="8" pin="830,410" width="8" x="336" y="236"/>
+      <circ-port height="10" pin="1010,270" width="10" x="365" y="195"/>
       <circ-anchor facing="east" height="6" width="6" x="367" y="177"/>
     </appear>
-    <wire from="(430,290)" to="(430,360)"/>
-    <wire from="(240,390)" to="(430,390)"/>
-    <wire from="(430,270)" to="(490,270)"/>
-    <wire from="(430,290)" to="(490,290)"/>
-    <wire from="(240,320)" to="(240,390)"/>
-    <wire from="(260,240)" to="(260,260)"/>
-    <wire from="(300,190)" to="(300,210)"/>
-    <wire from="(610,400)" to="(650,400)"/>
-    <wire from="(510,240)" to="(510,260)"/>
-    <wire from="(320,230)" to="(430,230)"/>
-    <wire from="(430,360)" to="(430,390)"/>
-    <wire from="(530,280)" to="(640,280)"/>
-    <wire from="(560,410)" to="(580,410)"/>
-    <wire from="(560,390)" to="(580,390)"/>
-    <wire from="(150,320)" to="(240,320)"/>
-    <wire from="(480,240)" to="(510,240)"/>
-    <wire from="(650,290)" to="(650,400)"/>
-    <wire from="(260,240)" to="(280,240)"/>
-    <wire from="(280,190)" to="(300,190)"/>
-    <wire from="(570,260)" to="(570,360)"/>
-    <wire from="(430,230)" to="(430,270)"/>
-    <wire from="(670,270)" to="(740,270)"/>
-    <wire from="(430,360)" to="(570,360)"/>
-    <wire from="(570,260)" to="(640,260)"/>
-    <wire from="(150,220)" to="(280,220)"/>
-    <comp lib="0" loc="(150,220)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="JS-Jump_Size"/>
-      <a name="labelfont" val="SansSerif bold 14"/>
-    </comp>
-    <comp lib="3" loc="(530,280)" name="Adder">
+    <wire from="(800,280)" to="(910,280)"/>
+    <wire from="(530,240)" to="(550,240)"/>
+    <wire from="(510,390)" to="(700,390)"/>
+    <wire from="(700,290)" to="(700,360)"/>
+    <wire from="(880,400)" to="(920,400)"/>
+    <wire from="(940,270)" to="(1010,270)"/>
+    <wire from="(750,240)" to="(780,240)"/>
+    <wire from="(700,360)" to="(840,360)"/>
+    <wire from="(830,390)" to="(850,390)"/>
+    <wire from="(530,240)" to="(530,260)"/>
+    <wire from="(700,290)" to="(760,290)"/>
+    <wire from="(700,360)" to="(700,390)"/>
+    <wire from="(570,190)" to="(570,210)"/>
+    <wire from="(550,190)" to="(570,190)"/>
+    <wire from="(780,240)" to="(780,260)"/>
+    <wire from="(420,320)" to="(510,320)"/>
+    <wire from="(700,230)" to="(700,270)"/>
+    <wire from="(840,260)" to="(840,360)"/>
+    <wire from="(420,220)" to="(550,220)"/>
+    <wire from="(510,320)" to="(510,390)"/>
+    <wire from="(830,410)" to="(850,410)"/>
+    <wire from="(700,270)" to="(760,270)"/>
+    <wire from="(920,290)" to="(920,400)"/>
+    <wire from="(840,260)" to="(910,260)"/>
+    <wire from="(590,230)" to="(700,230)"/>
+    <comp lib="3" loc="(800,280)" name="Adder">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(150,320)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="IA-InstructionAddress"/>
-      <a name="labelfont" val="SansSerif bold 14"/>
-    </comp>
-    <comp lib="0" loc="(280,190)" name="Ground">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="3" loc="(320,230)" name="Multiplier">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(560,410)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="FC"/>
-      <a name="labelfont" val="SansSerif bold 14"/>
-    </comp>
-    <comp lib="6" loc="(511,316)" name="Text">
-      <a name="text" val="IA + (JS x 4)"/>
-      <a name="font" val="SansSerif bold 14"/>
-    </comp>
-    <comp lib="2" loc="(670,270)" name="Multiplexer">
-      <a name="width" val="32"/>
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="0" loc="(480,240)" name="Ground"/>
-    <comp lib="0" loc="(740,270)" name="Pin">
+    <comp lib="0" loc="(1010,270)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
@@ -144,22 +112,54 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="east"/>
       <a name="labelfont" val="SansSerif bold 14"/>
     </comp>
-    <comp lib="6" loc="(300,265)" name="Text">
+    <comp lib="6" loc="(781,316)" name="Text">
+      <a name="text" val="IA + (JS x 4)"/>
+      <a name="font" val="SansSerif bold 14"/>
+    </comp>
+    <comp lib="0" loc="(420,320)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="IA-InstructionAddress"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+    </comp>
+    <comp lib="0" loc="(830,410)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="FC"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+    </comp>
+    <comp lib="0" loc="(550,190)" name="Ground">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="3" loc="(590,230)" name="Multiplier">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(940,270)" name="Multiplexer">
+      <a name="width" val="32"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="6" loc="(570,265)" name="Text">
       <a name="text" val="JS x 4"/>
       <a name="font" val="SansSerif bold 14"/>
     </comp>
-    <comp lib="0" loc="(560,390)" name="Pin">
+    <comp lib="0" loc="(420,220)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="JS-Jump_Size"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+    </comp>
+    <comp lib="0" loc="(750,240)" name="Ground"/>
+    <comp lib="0" loc="(830,390)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="jmp"/>
       <a name="labelfont" val="SansSerif bold 14"/>
     </comp>
-    <comp lib="1" loc="(610,400)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(260,260)" name="Constant">
+    <comp lib="0" loc="(530,260)" name="Constant">
       <a name="width" val="32"/>
       <a name="value" val="0x4"/>
+    </comp>
+    <comp lib="1" loc="(880,400)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
     </comp>
   </circuit>
 </project>
