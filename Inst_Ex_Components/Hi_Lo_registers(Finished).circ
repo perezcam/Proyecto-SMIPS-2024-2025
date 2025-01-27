@@ -67,41 +67,25 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <circ-port height="8" pin="180,390" width="8" x="366" y="256"/>
       <circ-port height="10" pin="430,140" width="10" x="395" y="225"/>
       <circ-port height="10" pin="430,270" width="10" x="395" y="235"/>
+      <circ-port height="8" pin="180,430" width="8" x="386" y="256"/>
       <circ-anchor facing="east" height="6" width="6" x="397" y="217"/>
     </appear>
-    <wire from="(260,150)" to="(320,150)"/>
-    <wire from="(260,280)" to="(320,280)"/>
-    <wire from="(260,280)" to="(260,350)"/>
-    <wire from="(300,170)" to="(300,300)"/>
-    <wire from="(260,150)" to="(260,280)"/>
-    <wire from="(270,190)" to="(270,390)"/>
-    <wire from="(330,290)" to="(330,300)"/>
-    <wire from="(330,160)" to="(330,170)"/>
-    <wire from="(340,160)" to="(340,190)"/>
-    <wire from="(340,290)" to="(340,390)"/>
-    <wire from="(180,390)" to="(270,390)"/>
-    <wire from="(300,300)" to="(330,300)"/>
-    <wire from="(300,170)" to="(330,170)"/>
-    <wire from="(290,170)" to="(300,170)"/>
-    <wire from="(180,350)" to="(260,350)"/>
-    <wire from="(350,140)" to="(430,140)"/>
-    <wire from="(350,270)" to="(430,270)"/>
     <wire from="(180,270)" to="(320,270)"/>
+    <wire from="(300,170)" to="(300,180)"/>
+    <wire from="(300,300)" to="(300,310)"/>
+    <wire from="(340,160)" to="(340,180)"/>
+    <wire from="(260,150)" to="(320,150)"/>
+    <wire from="(340,290)" to="(340,310)"/>
+    <wire from="(330,290)" to="(330,300)"/>
+    <wire from="(260,280)" to="(320,280)"/>
+    <wire from="(300,300)" to="(330,300)"/>
     <wire from="(180,140)" to="(320,140)"/>
-    <wire from="(270,390)" to="(340,390)"/>
-    <wire from="(270,190)" to="(340,190)"/>
-    <comp lib="0" loc="(430,270)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="label" val="Lo Data"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(290,170)" name="Clock"/>
-    <comp lib="0" loc="(180,350)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="Update"/>
-    </comp>
+    <wire from="(350,270)" to="(430,270)"/>
+    <wire from="(260,280)" to="(260,310)"/>
+    <wire from="(330,160)" to="(330,170)"/>
+    <wire from="(350,140)" to="(430,140)"/>
+    <wire from="(260,150)" to="(260,180)"/>
+    <wire from="(300,170)" to="(330,170)"/>
     <comp lib="0" loc="(430,140)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -109,27 +93,75 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="HI Data"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(180,270)" name="Pin">
+    <comp lib="4" loc="(350,270)" name="Register">
       <a name="width" val="32"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Lo Content"/>
+      <a name="label" val="Lo Register"/>
     </comp>
     <comp lib="0" loc="(180,390)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="Reset"/>
     </comp>
+    <comp lib="0" loc="(340,310)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="reset"/>
+    </comp>
     <comp lib="4" loc="(350,140)" name="Register">
       <a name="width" val="32"/>
       <a name="label" val="Hi Register"/>
     </comp>
-    <comp lib="4" loc="(350,270)" name="Register">
+    <comp lib="0" loc="(260,180)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="upd"/>
+    </comp>
+    <comp lib="0" loc="(180,270)" name="Pin">
       <a name="width" val="32"/>
-      <a name="label" val="Lo Register"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Lo Content"/>
+    </comp>
+    <comp lib="0" loc="(180,430)" name="Tunnel">
+      <a name="label" val="clock"/>
+    </comp>
+    <comp lib="0" loc="(260,310)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="upd"/>
     </comp>
     <comp lib="0" loc="(180,140)" name="Pin">
       <a name="width" val="32"/>
       <a name="tristate" val="false"/>
       <a name="label" val="HI Content"/>
+    </comp>
+    <comp lib="0" loc="(300,180)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="clock"/>
+    </comp>
+    <comp lib="0" loc="(430,270)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="label" val="Lo Data"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(180,350)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="Update"/>
+    </comp>
+    <comp lib="0" loc="(180,350)" name="Tunnel">
+      <a name="label" val="upd"/>
+    </comp>
+    <comp lib="0" loc="(340,180)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="reset"/>
+    </comp>
+    <comp lib="0" loc="(300,310)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="clock"/>
+    </comp>
+    <comp lib="0" loc="(180,430)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="clock"/>
+    </comp>
+    <comp lib="0" loc="(180,390)" name="Tunnel">
+      <a name="label" val="reset"/>
     </comp>
   </circuit>
 </project>
