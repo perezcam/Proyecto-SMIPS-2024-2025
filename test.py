@@ -34,7 +34,7 @@ class TestCase:
     def run(self, logisim: str, circ: str, template: str) -> None:
         result = ""
         cmd = [
-            "/mnt/c/Logisim/logisim-win-2.7.1.exe",
+            logisim,
             template,
             "-tty",
             "halt,tty,speed",
@@ -48,7 +48,10 @@ class TestCase:
             print_verbose(
                 verbose_level_test_detail, "Ejecutando el test: ", self.test_name
             )
-            result = subprocess.run(cmd, stdout=subprocess.PIPE)
+            import os
+            print("PATH:", os.environ["PATH"])
+            os.environ["PATH"] += ":/mnt/c/Logisim"
+            result = subprocess.run(cmd, stdout=subprocess.PIPE, shell=True)
             self.runned = True
             if result.returncode != 0:
                 print("Error al ejecutar test: ", self.test_name)
@@ -203,14 +206,14 @@ class TestSuite:
 
     def run_all(self) -> None:
         for test in self.test:
-            test.run("/mnt/c/Logisim/logisim-win-2.7.1.exe", self.circ, self.template)
+            test.run("logisim", self.circ, self.template)
             self.failed |= test.failed
             test.print()
 
     def run_test(self, test_name: str) -> None:
         for test in self.test:
             if test.name == test_name:
-                test.run("/mnt/c/Logisim/logisim-win-2.7.1.exe", self.circ, self.template)
+                test.run("logisim", self.circ, self.template)
                 self.failed |= test.failed
                 test.print()
 
